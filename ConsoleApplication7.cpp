@@ -1,46 +1,125 @@
 #include <iostream>
-using namespace std;
-
+#include "Cart.h"
 #include "ItemToPurchase.h"
+
 using namespace std;
 
 int main() {
+    Cart cart;
+    cout << "-----------------------------------------------------------" << endl;
+    cout << "---------------Inventory Management System ----------------" << endl;
+    cout << "-----------------------------------------------------------" << endl;
 
-	//ask how many items 
-	// 3 items
+    char choice;
+    do {
+        cout << "Please choose an option:" << endl;
+        cout << "1. Add a product" << endl;
+        cout << "2. Remove a product" << endl;
+        cout << "3. Find a product" << endl;
+        cout << "4. Update a product" << endl;
+        cout << "5. View all products" << endl;
+        cout << "6. Save inventory to file" << endl;
+        cout << "7. Load Inventory from file" << endl;
+        cout << "Q. Quit" << endl;
+        cin >> choice;
 
+        switch (choice) {
+        case '1': {
+            string name;
+            double price;
+            int quantity;
+            int type;
 
-	string name1, name2;
-	int price1, price2, quantity1, quantity2;
-	ItemToPurchase item1;
-	cout << "Item 1" << endl;
-	cout << "Enter the item name: " << endl;
-	cin >> name1;
-	cout << "Enter the item price: " << endl;
-	cin >> price1;
-	cout << "Enter the item quantity: " << endl;
-	cin >> quantity1;
-	
-
-	cin.ignore();
-	ItemToPurchase item2;
-	cout << "Item 2" << endl;
-	cout << "Enter the item name: " << endl;
-	cin >> name2;
-	cout << "Enter the item price: " << endl;
-	cin >> price2;
-	cout << "Enter the item quantity:" << endl;
-	cin >> quantity2;
-
-	cout << "TOTAL COST " << endl;
-	cout << item1.GetName() << " " << item1.GetQuantity() << " @ $" << item1.GetPrice() << " = &" << item1.getTotal()<<endl;
-	cout << item2.GetName() << " " << item2.GetQuantity() << " @ $" << item2.GetPrice() << " = &" << item2.getTotal()<<endl;
-	cout << endl;
-	int totalPrice = item1 + item2;
-
-	cout << "Total: $" << totalPrice;
-
+            cout << "Enter product name: ";
+            cin >> name;
+            cout << "Enter product price: $ ";
+            cin >> price;
+            cout << "Enter product quantity: ";
+            cin >> quantity;
+            cout << "Enter product type: ";
+            cin >> type;
 
 
-	return 0;
+            ItemToPurchase item(name, price, quantity, type);
+            cart.addItem(item);
+            break;
+        }
+
+        case '2': {
+            string name;
+            cout << "Enter product name: ";
+            cin >> name;
+            cart.removeItem(name);
+            break;
+        }
+
+        case '3': {
+            string name;
+            cout << "Enter product name: ";
+            cin >> name;
+            ItemToPurchase* item = cart.findItem(name);
+            if (item) {
+                cout << "Name: " << item->GetName() << endl;
+                cout << "Category: " << item->getItemType() << endl;
+                cout << "Price: $ " << item->GetPrice() << endl;
+                cout << "Quantity: " << item->GetQuantity() << endl;
+                cout << "-----------------------------------------------------------" << endl;
+            }
+            else {
+                cout << "Product not found." << endl;
+                cout << "-----------------------------------------------------------" << endl;
+            }
+            break;
+        }
+
+        case '4': {
+            string name;
+            int price;
+            int quantity;
+            int type;
+
+            cout << "Enter new product name: ";
+            cin >> name;
+            cout << "Enter new product price: $ ";
+            cin >> price;
+            cout << "Enter new product quantity: ";
+            cin >> quantity;
+            cout << "Enter new product type: ";
+            cin >> type;
+            cart.updateItem(name, price, quantity, type);
+            cout << "Product updated" << endl;
+            cout << "-----------------------------------------------------------" << endl;
+            break;
+        }
+
+        case '5': {
+            cart.printCart();
+            break;
+        }
+        case '6': {
+            cart.toFile(); //filename to insert
+            cout << "Inventory saved to file." << endl;
+            cout << "-----------------------------------------------------------" << endl;
+            break;
+        }
+        case '7': {
+            cart.fromFile(); //filename to insert
+            cout << "Inventory loaded from file." << endl;
+            cout << "-----------------------------------------------------------" << endl;
+            break;
+        }
+        case 'q':
+        case 'Q':
+            cout << "Finished shopping" << endl;
+            cout << "-----------------------------------------------------------" << endl;
+            return 0;
+
+        default:
+            cout << "Invalid Choice. Please Try again" << endl;
+            cout << "-----------------------------------------------------------" << endl;
+            break;
+        }
+    } while (true);
+
+    return 0;
 }
