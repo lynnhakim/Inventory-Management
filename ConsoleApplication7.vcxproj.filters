@@ -18,7 +18,7 @@
     <ClCompile Include="ConsoleApplication7.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ItemToPurchase.cpp">
+    <ClCompile Include="Item.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Cart.cpp">
@@ -27,15 +27,24 @@
     <ClCompile Include="dataBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ItemToPurchase.h">
+    <ClInclude Include="Item.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Cart.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="dataBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

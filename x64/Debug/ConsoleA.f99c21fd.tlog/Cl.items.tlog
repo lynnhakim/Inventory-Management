@@ -1,4 +1,5 @@
-C:\Users\lynnh\Desktop\C++\ConsoleApplication7\Cart.cpp;C:\Users\lynnh\Desktop\C++\ConsoleApplication7\x64\Debug\Cart.obj
-C:\Users\lynnh\Desktop\C++\ConsoleApplication7\ConsoleApplication7.cpp;C:\Users\lynnh\Desktop\C++\ConsoleApplication7\x64\Debug\ConsoleApplication7.obj
-C:\Users\lynnh\Desktop\C++\ConsoleApplication7\dataBase.cpp;C:\Users\lynnh\Desktop\C++\ConsoleApplication7\x64\Debug\dataBase.obj
-C:\Users\lynnh\Desktop\C++\ConsoleApplication7\ItemToPurchase.cpp;C:\Users\lynnh\Desktop\C++\ConsoleApplication7\x64\Debug\ItemToPurchase.obj
+D:\git\Cart.cpp;D:\git\x64\Debug\Cart.obj
+D:\git\ConsoleApplication7.cpp;D:\git\x64\Debug\ConsoleApplication7.obj
+D:\git\dataBase.cpp;D:\git\x64\Debug\dataBase.obj
+D:\git\Inventory.cpp;D:\git\x64\Debug\Inventory.obj
+D:\git\Item.cpp;D:\git\x64\Debug\Item.obj
