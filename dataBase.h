@@ -1,9 +1,16 @@
 #pragma once
-class dataBase
-{
+#include <iostream>
+#include <fstream>
+#include "Inventory.h" // will work with inventory
+
+class Database {
 public:
-	dataBase();
-	void makeFile();
-	void updateFile();
-	void printFile();
+    Database(); // Constructor 
+
+    void makeFile(const Inventory& inventory);
+    void updateFile(const Inventory& inventory); // updating files
+    void printFile() const; // Print database contents
+
+private:
+   //will use this to add private methods
 };
