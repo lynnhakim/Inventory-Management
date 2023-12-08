@@ -4,8 +4,8 @@ Database::Database() {
     // Constructor implementation 
 }
 
-void Database::makeFile(const Inventory& inventory) {
-    std::ofstream outputFile("dbfile"); // Will have to add a file 
+void Database::makeFile( Inventory inventory) {
+    std::ofstream outputFile("dbfile.txt"); // Will have to add a file 
 
     if (outputFile.is_open()) {
         for (int i = 0; i < inventory.GetSize(); ++i) {

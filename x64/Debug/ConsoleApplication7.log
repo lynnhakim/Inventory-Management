@@ -1,4 +1,9 @@
 ﻿  Cart.cpp
   ConsoleApplication7.cpp
+  dataBase.cpp
+  Inventory.cpp
+C:\Users\lynnh\OneDrive\Documents\Inventory-Management\Inventory.cpp(35,23): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lynnh\OneDrive\Documents\Inventory-Management\Inventory.cpp(56,29): warning C4018: '<': signed/unsigned mismatch
+  Item.cpp
   Generating Code...
-  ConsoleApplication7.vcxproj -> D:\git\x64\Debug\ConsoleApplication7.exe
+  ConsoleApplication7.vcxproj -> C:\Users\lynnh\OneDrive\Documents\Inventory-Management\x64\Debug\ConsoleApplication7.exe

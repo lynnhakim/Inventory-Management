@@ -7,7 +7,7 @@ class Database {
 public:
     Database(); // Constructor 
 
-    void makeFile(const Inventory& inventory);
+    void makeFile( Inventory inventory);
     void updateFile(const Inventory& inventory); // updating files
     void printFile() const; // Print database contents
 
