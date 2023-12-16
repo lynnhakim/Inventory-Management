@@ -16,13 +16,13 @@ class Item {
 public:
 	Item(string name, int price, TYPE type);
 	void SetName(string);
-	string GetName();
+	string GetName() const;
 
 	void SetPrice(int);
-	int GetPrice();
+	int GetPrice() const;
 
 	void SetType(TYPE);
-	TYPE  GetType();
+	TYPE  GetType() const;
 private:
 	string itemName;
 	int itemPrice;

@@ -1,6 +1,10 @@
 #pragma once
 #include "Cart.h"
 
+Cart::Cart() {
+	total = 0;
+}
+
 void Cart::AddItem(string name, int quantity) {
 	for (int i = 0; i < inv.GetSize(); ++i) {
 		if (inv.GetItem(i).GetName() == name) {
@@ -17,6 +21,7 @@ void Cart::RemoveItem(string name) {
 	for (int i = 0; i < items.size(); ++i) {
 		if (items.at(i).GetName() == name) {
 			items.erase(items.begin() + i);
+			i--;
 			return;
 		}
 	}
@@ -29,7 +34,7 @@ bool Cart::InCart(string name) {
 	}
 	return false;
 }
-int Cart::GetQuantity(string name) {
+int Cart::GetQuantity(string name) const{
 	int quantity = 0;
 	for (int i = 0; i < items.size(); ++i) {
 		if (items.at(i).GetName() == name) {
@@ -38,7 +43,7 @@ int Cart::GetQuantity(string name) {
 	}
 	return quantity;
 }
-void Cart::PrintItem(string name) {
+void Cart::PrintItem(string name) const{
 	for (int i = 0; i < items.size(); ++i) {
 		if (items.at(i).GetName() == name) {
 			cout << items.at(i);

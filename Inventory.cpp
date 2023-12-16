@@ -31,10 +31,10 @@ void Inventory::Stock() {
 Item Inventory::GetItem(int index) const{
 	return *(inventory.at(index));
 }
-int Inventory::GetSize(){
+int Inventory::GetSize() const{
 	return inventory.size();
 }
-int Inventory::GetQuantity(string name) {
+int Inventory::GetQuantity(string name) const{
 	int quantity = 0;
 	for (int i = 0; i < inventory.size(); ++i) {
 		if (inventory.at(i)->GetName() == name) {

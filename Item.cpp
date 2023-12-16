@@ -10,19 +10,19 @@ Item::Item(string name, int price, TYPE type) {
 void Item::SetName(string name) {
 	itemName = name;
 }
-string Item::GetName() {
+string Item::GetName() const{
 	return itemName;
 }
 
 void Item::SetPrice(int price) {
 	itemPrice = price;
 }
-int Item::GetPrice() {
+int Item::GetPrice() const{
 	return itemPrice;
 }
 void Item::SetType(TYPE type) {
 	this->type = type;
 }
-TYPE  Item::GetType() {
+TYPE  Item::GetType() const{
 	return type;
 }
